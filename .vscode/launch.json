@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "DoublyC",
+      "request": "launch",
+      "mainClass": "Java.DoublyC",
+      "projectName": "Data_Structure_7b003d85"
+    },
+    {
+      "type": "java",
+      "name": "program378",
+      "request": "launch",
+      "mainClass": "Java.program378",
+      "projectName": "Data_Structure_7b003d85"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/sanke/Desktop/Data_Structure/C",
+      "program": "c:/Users/sanke/Desktop/Data_Structure/C/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
