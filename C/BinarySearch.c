@@ -25,21 +25,31 @@ void Display(int *Arr, int iSize)
     printf("\n");
 }
 
-bool Bidirectional(int *Arr, int iSize, int no)
+bool BinarySearch(int *Arr, int iSize, int no)
 {
-    int iStart = 0, iEnd = iSize - 1;
+    int low = 0;
+    int high = iSize - 1;
     bool bFlag = false;
 
-    for(iStart = 0, iEnd = iSize; iStart < iEnd;iStart++, iEnd--)
+    while(low <= high)
     {
-        if(Arr[iStart] == no || Arr[iEnd] == no)
+        int mid = low + (high - low) / 2;
+        
+        if(Arr[mid] == no)
         {
-            bFlag = true;
-            break;
+            return true;
+        }
+        else if(Arr[mid] < no)
+        {
+            low = mid + 1;
+        }
+        else if(Arr[mid] < no)
+        {
+            high = mid - 1;
         }
     }
 
-    return bFlag;
+    return false;
 }
 
 int main()
@@ -57,7 +67,7 @@ int main()
        
     Display(Arr, iSize);
 
-    bRet = Bidirectional(Arr,iSize,5);
+    bRet = BinarySearch(Arr,iSize,5);
     if(bRet == true)
     {
         printf("Element is Present\n");

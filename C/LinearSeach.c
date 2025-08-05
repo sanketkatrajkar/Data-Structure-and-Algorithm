@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 #include<stdbool.h>
 
 void Accept(int *Arr, int iSize)
@@ -8,7 +9,7 @@ void Accept(int *Arr, int iSize)
 
     for(i = 0; i < iSize; i++)
     {
-        scanf("%d ",&Arr[i]);
+        scanf("%d",&Arr[i]);
     } 
 }
 
