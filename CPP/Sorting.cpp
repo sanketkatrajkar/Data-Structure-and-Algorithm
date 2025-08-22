@@ -64,7 +64,7 @@ class ArrayX
                 return;
             }
             
-            for(i = 0; (i < iSize && bFlag == true); i++)
+            for(i = 0; (i < iSize && bFlag == true); i++)  /// Bubble Sort
             {
                 bFlag = false;
 
@@ -80,7 +80,54 @@ class ArrayX
                     }
                 }
             }
-        }  
+         }
+
+            void SelectionSort(int no)   ////Selection Sort
+            {
+                int i = 0, j = 0, temp = 0;
+                int min_index = 0;
+
+                bool bFlag = true;
+    
+                if(Sorted == true)
+                {
+                    return;
+                }
+            
+                for(i = 0; i < iSize; i++)    
+                {
+                    min_index = i;
+    
+                    for(j = i + 1; j < iSize; j++)
+                    {
+                        if(Arr[min_index] < Arr[j])
+                        {
+                           min_index = j; 
+                        }
+                    }
+
+                    temp = Arr[min_index];
+                    Arr[min_index] = Arr[i];
+                    Arr[i]  = temp;
+                }
+
+                Sorted = true;
+            }
+
+            void InsertionSort(int no)
+            {
+                int i = 0, j = 0, selected = 0;
+    
+                for(i = 1; i < iSize; i++)
+                {
+                    for(j = i - 1,selected = Arr[i]; (j >= 0) && (Arr[j] > selected); j--)
+                    {
+                        Arr[j + 1] = Arr[j]; 
+                    }
+                    Arr[j + 1] = selected;
+                }
+            }
+          
 };
 
 int main()
@@ -96,7 +143,7 @@ int main()
 
     aobj->Display();
 
-    aobj ->BubbleSort(iLength);
+    aobj ->InsertionSort(iLength);
 
     cout << "Data after the sorting element \n";
 
